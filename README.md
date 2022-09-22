@@ -9,7 +9,7 @@ Each question is validated to ensure the information being provided is in the co
 
 The user is able to add as many employees to the team as desired, and can exit the application once the process of building the team is complete.
 
-You are also able to view a showcasing of this project by checking out [this video link](https://drive.google.com/file/d/1DwH71Anl9O3dZUUCtgLEI_Ykdbi_dTHe/view).
+You are also able to view a showcasing of this project by checking out [this video link](https://drive.google.com/file/d/1ZC1ZVtfiUQLsdJZuWTrOSpYVRQwTwfKh/view).
 
 #### Screenshot
 ![Screenshot](/assets/images/screenshot.png)
