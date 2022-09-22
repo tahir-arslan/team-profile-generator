@@ -57,7 +57,7 @@ const roleInfo = role => {
 
 const targetInfo = teamData => {
     if (teamData.officeNumber) return `<b>Office Number:</b> ${teamData.officeNumber}`;
-    if (teamData.github) return `<b>GitHub:</b> <a href="https://github.com/${teamData.github}">${teamData.github}</a>`;
+    if (teamData.github) return `<b>GitHub:</b> <a href="https://github.com/${teamData.github}" target="_blank">${teamData.github}</a>`;
     if (teamData.school) return `<b>School Name:</b> ${teamData.school}`;
 };
 
