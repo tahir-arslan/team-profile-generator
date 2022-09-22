@@ -28,11 +28,15 @@ const questionsManager = [{
     type: 'text',
     name: 'managerEmail',
     message: 'What is your email address?',
-    validate: managerEmailInput => {
-        if (managerEmailInput) {
+    validate: emailInput => {
+        let valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)
+        if (emailInput && valid) {
             return true;
+        } else if (emailInput && !valid) {
+            console.log('     Please enter a valid email.');
+            return false;
         } else {
-            console.log('Please enter email address!');
+            console.log("Please enter this employee's email address!");
             return false;
         }
     }
