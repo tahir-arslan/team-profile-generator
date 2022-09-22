@@ -35,7 +35,7 @@ const infoCard = teamData => {
         <div class="cardbody">
             <ul class="info">
                 <li> <b>ID:</b> ${teamData.id} </li>
-                <li> <b>Email:</b> ${teamData.email} </li>
+                <li> <b>Email:</b> <a href = "mailto: ${teamData.email}">${teamData.email}</a></li>
                 <li> ${targetInfo(teamData)} </li>
             </ul>
         </div>
@@ -77,7 +77,6 @@ module.exports = teamData => {
         console.log("HTML template generated! Now Creating Files...")
         generateFiles(buildHTML);
     } else {
-        console.log(teamData);
         buildHTML += infoCard(teamData);
     }
 };
