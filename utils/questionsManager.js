@@ -6,7 +6,7 @@ const questionsManager = [{
         if (managerNameInput) {
             return true;
         } else {
-            console.log('Please enter your name!');
+            console.log('     Please enter your name!');
             return false;
         }
     }
@@ -19,7 +19,7 @@ const questionsManager = [{
         if (managerIdInput) {
             return true;
         } else {
-            console.log('Please enter your employee ID!');
+            console.log('     Please enter your employee ID!');
             return false;
         }
     }
@@ -36,7 +36,7 @@ const questionsManager = [{
             console.log('     Please enter a valid email.');
             return false;
         } else {
-            console.log("Please enter this employee's email address!");
+            console.log("     Please enter your email address!");
             return false;
         }
     }
@@ -46,11 +46,14 @@ const questionsManager = [{
     name: 'managerOfficeNumber',
     message: 'What is the number to contact your office?',
     validate: manageNumberInput => {
-        if (manageNumberInput) {
+        let valid = /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/.test(manageNumberInput)
+        if (manageNumberInput && valid) {
             return true;
-        } else {
-            console.log('Please enter your office phone number!');
+        } else if (manageNumberInput && !valid) {
+            console.log('     Please enter a valid phone number');
             return false;
+        } else {
+            console.log("     Please enter the phone number to your office.")
         }
     }
 }]
